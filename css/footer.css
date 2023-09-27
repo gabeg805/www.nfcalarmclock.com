@@ -1,0 +1,61 @@
+/* ------------- */
+/* Main settings */
+/* ------------- */
+
+footer
+{
+	background-color : #101010;
+	padding          : 1em 0;
+	text-align       : center;
+	height           : 3.7em;
+}
+
+footer a,
+footer p
+{
+	color : #b2b2b2;
+}
+
+footer a:hover
+{
+	background-color : #111111;
+	color            : #ffffff;
+}
+
+/* --------------- */
+/* Custom settings */
+/* --------------- */
+
+#footer p
+{
+    font-size : 0.65em;
+    /* margin    : 0; */
+}
+
+#footer ul
+{
+    display         : inline-block;
+    list-style-type : none;
+    /* margin          : 0; */
+    padding         : 0;
+
+    /* For IE, the outcast */
+    zoom            : 1;
+    *display        : inline;
+}
+
+#footer li
+{
+    float   : left;
+    padding : 0 0.75em;
+    line-height : 0;
+}
+
+#footer a
+{
+    border-radius : 50%;
+    display       : block;
+    font-size     : 1.25em;
+    padding       : 0.4em;
+}
+

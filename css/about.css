@@ -1,0 +1,14 @@
+#about .row-cell:first-child
+{
+    width : 55%;
+}
+
+#about .row-cell:last-child
+{
+    width : 35%;
+}
+
+#about .row-cell img
+{
+    border-radius : 50%;
+}

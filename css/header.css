@@ -1,0 +1,65 @@
+/* ------------- */
+/* Main settings */
+/* ------------- */
+
+header
+{
+	background-color : black;
+	box-shadow       : 0 0.25em 0.25em -0.25em #fb8c00;
+	margin-bottom    : 0.5em;
+	position         : fixed;
+	width            : 100%;
+}
+
+header a,
+header button
+{
+	color : white;
+}
+
+header a:hover,
+header button:hover
+{
+	color       : #fb8c00;
+	text-shadow : 0 0.25em 1em #a9a9a9;
+}
+
+/* --------------- */
+/* Custom settings */
+/* --------------- */
+
+#header .navbar
+{
+	overflow : hidden;
+}
+
+#header .navhome,
+#header .navlinks
+{
+	padding : 0.75em 0;
+}
+
+#header .navhome
+{
+	float : left;
+}
+
+#header .navlinks
+{
+	float : right;
+}
+
+#header .navbar a
+{
+	padding         : 0 1em;
+	text-align      : center;
+	text-decoration : none;
+}
+
+#header .navhome a
+{
+	/* color       : #ff3b3f; */
+	color       : #fb8c00;
+	font-weight : bold;
+}
+
