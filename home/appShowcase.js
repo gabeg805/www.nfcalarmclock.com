@@ -2,11 +2,11 @@
 var images = [];
 var i = 0;
 
-images[0] = "../images/new_home.png";
-images[1] = "../images/new_home_expanded.png";
-images[2] = "../images/new_customize.png";
-//images[3] = "../images/Phone_Screenshot_Dismiss.png";
-//images[4] = "../images/Phone_Screenshot_Swipe_v2.png";
+images[0] = "../home/img/new_home.png";
+images[1] = "../home/img/new_home_expanded.png";
+images[2] = "../home/img/new_customize.png";
+//images[3] = "../home/img/Phone_Screenshot_Dismiss.png";
+//images[4] = "../home/img/Phone_Screenshot_Swipe_v2.png";
 
 // Show the next image of the app
 function showNextImage()

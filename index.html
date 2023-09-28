@@ -10,23 +10,23 @@
 
     <!-- CSS -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="./css/common.css" rel="stylesheet" type="text/css">
-    <link href="./css/header.css" rel="stylesheet" type="text/css">
-    <link href="./css/footer.css" rel="stylesheet" type="text/css">
-    <link href="./css/home.css"   rel="stylesheet" type="text/css">
-    <link href="./css/about.css"  rel="stylesheet" type="text/css">
+    <link href="./util/common.css"   rel="stylesheet" type="text/css">
+    <link href="./header/header.css" rel="stylesheet" type="text/css">
+    <link href="./footer/footer.css" rel="stylesheet" type="text/css">
+    <link href="./home/home.css"     rel="stylesheet" type="text/css">
+    <link href="./about/about.css"   rel="stylesheet" type="text/css">
 
     <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/includehtml.js"></script>
-    <script src="./js/appShowcase.js"></script>
-    <script src="./js/showHideHeaderOnScroll.js"></script>
-    <script src="./js/hamburgerIconOnClick.js"></script>
+    <script src="./util/includehtml.js"></script>
+    <script src="./header/showHideHeaderOnScroll.js"></script>
+    <script src="./header/hamburgerIconOnClick.js"></script>
+    <script src="./home/appShowcase.js"></script>
 
     <!-- Includes -->
-    <script>includeHtml("#header", "./html/header.html");</script>
-    <script>includeHtml("#footer", "./html/footer.html");</script>
-    <script>includeHtml("#home",   "./html/home.html");</script>
+    <script>includeHtml("#header", "./header/header.html");</script>
+    <script>includeHtml("#footer", "./footer/footer.html");</script>
+    <script>includeHtml("#home",   "./home/home.html");</script>
 		<!--
     <script>includeHtml("#about",  "./html/about.html");</script>
   <body onload="startAppShowcase()">
@@ -41,7 +41,7 @@
       <header id="header"></header>
 
       <!-- Body -->
-      <div class="content-container">
+      <div id="main" class="content-container">
         <section id="home"></section>
 				<!--
         <section id="about"></section>
