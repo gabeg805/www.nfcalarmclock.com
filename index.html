@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <title>NFC Alarm Clock by Gabe Gonzalez</title>
+		<title>NFC Alarm Clock by Gabe Gonzalez</title>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans" rel="stylesheet" type="text/css">
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans" rel="stylesheet" type="text/css">
 
-    <!-- CSS -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="./util/common.css"   rel="stylesheet" type="text/css">
-    <link href="./header/header.css" rel="stylesheet" type="text/css">
-    <link href="./footer/footer.css" rel="stylesheet" type="text/css">
-    <link href="./home/home.css"     rel="stylesheet" type="text/css">
-    <link href="./about/about.css"   rel="stylesheet" type="text/css">
+		<!-- CSS -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="./util/common.css"   rel="stylesheet" type="text/css">
+		<link href="./header/header.css" rel="stylesheet" type="text/css">
+		<link href="./footer/footer.css" rel="stylesheet" type="text/css">
+		<link href="./home/home.css"     rel="stylesheet" type="text/css">
+		<link href="./about/about.css"   rel="stylesheet" type="text/css">
 
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./util/includehtml.js"></script>
-    <script src="./header/showHideHeaderOnScroll.js"></script>
-    <script src="./header/hamburgerIconOnClick.js"></script>
-    <script src="./home/appShowcase.js"></script>
+		<!-- Javascript -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="./util/includehtml.js"></script>
+		<script src="./header/showHideHeaderOnScroll.js"></script>
+		<script src="./header/hamburgerIconOnClick.js"></script>
+		<script src="./home/appShowcase.js"></script>
 
-    <!-- Includes -->
-    <script>includeHtml("#header", "./header/header.html");</script>
-    <script>includeHtml("#footer", "./footer/footer.html");</script>
-    <script>includeHtml("#home",   "./home/home.html");</script>
+		<!-- Includes -->
+		<script>includeHtml("#header", "./header/header.html");</script>
+		<script>includeHtml("#footer", "./footer/footer.html");</script>
+		<script>includeHtml("#home",   "./home/home.html");</script>
 		<!--
-    <script>includeHtml("#about",  "./html/about.html");</script>
-  <body onload="startAppShowcase()">
-  <body>
+		<script>includeHtml("#about",  "./html/about.html");</script>
+		<body onload="startAppShowcase()">
+		<body>
 		-->
+	</head>
 
-  </head>
+	<body onload="startAppShowcase()">
 
-  <body onload="startAppShowcase()">
+		<!-- Header -->
+		<header id="header"></header>
 
-      <!-- Header -->
-      <header id="header"></header>
+		<!-- Body -->
+		<div id="main" class="content-container">
+			<section id="home"></section>
+			<!--
+			<section id="about"></section>
+			-->
+		</div>
 
-      <!-- Body -->
-      <div id="main" class="content-container">
-        <section id="home"></section>
-				<!--
-        <section id="about"></section>
-				-->
-      </div>
+		<!-- Footer -->
+		<footer id="footer"></footer>
 
-      <!-- Footer -->
-      <footer id="footer"></footer>
-
-  </body>
+	</body>
 </html>
 
 <!-- Have a paper icon at end and "View Resume" -->
 
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="cntl.css"> -->
-    <!-- <\!-- <link rel="stylesheet" href="reset.css"> <\\!-- CSS reset -\\-> -\-> -->
-    <!-- <link rel="stylesheet" href="style.css"> <\!-- Resource style -\-> -->
-    <!-- <script src="modernizr.js"></script> <\!-- Modernizr -\-> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="cntl.css"> -->
+		<!-- <\!-- <link rel="stylesheet" href="reset.css"> <\\!-- CSS reset -\\-> -\-> -->
+		<!-- <link rel="stylesheet" href="style.css"> <\!-- Resource style -\-> -->
+		<!-- <script src="modernizr.js"></script> <\!-- Modernizr -\-> -->
