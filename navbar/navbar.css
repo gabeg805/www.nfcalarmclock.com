@@ -1,0 +1,40 @@
+/* ----------------- */
+/* Default Overrides */
+/* ----------------- */
+
+/*
+.navbar
+{
+*/
+	/*
+	border: solid rgba(0, 0, 0, 0);
+	border-width: 2px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+	*/
+
+/*
+	--nac-tertiary-bg-rgb          : 30, 30, 30;
+	--nac-navbar-brand-color       : white;
+	--nac-navbar-brand-hover-color : var(--nac-primary);
+}
+
+.navbar-nav
+{
+	--nac-nav-link-color       : white;
+	--nac-nav-link-hover-color : var(--nac-primary);
+}
+
+.nav-link.active
+{
+	--nac-nav-pills-link-active-bg : var(--nac-tertiary-bg-rgb);
+	--nac-navbar-active-color      : var(--nac-primary);
+	border                         : 1px solid var(--nac-primary);
+}
+
+.nav-link.active:hover
+{
+	--nac-nav-pills-link-active-bg : var(--nac-primary);
+	--nac-navbar-active-color      : rgb(var(--nac-tertiary-bg-rgb));
+}
+*/
+

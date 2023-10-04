@@ -1,0 +1,110 @@
+@import "../lib/node_modules/bootstrap/scss/functions";
+//@import "../lib/node_modules/bootstrap/scss/variables";
+//@import "../lib/node_modules/bootstrap/scss/mixins";
+
+// Variable overrides first
+$primary: #fb8c00;
+$enable-shadows: true;
+$prefix: "nac-";
+
+[data-bs-theme="dark"] {
+
+	--nac-body-color : #aaaaaa;
+	--nac-body-font-size : 1.125rem;
+
+	a
+	{
+		--nac-link-color-rgb : #{to-rgb(white)};
+	}
+
+	a:hover
+	{
+		--nac-link-hover-color-rgb : #{to-rgb($primary)};
+	}
+
+	// Navbar
+	.navbar
+	{
+		--nac-tertiary-bg-rgb          : #{to-rgb(#1e1e1e)};
+		--nac-navbar-brand-color       : white;
+		--nac-navbar-brand-hover-color : var(--nac-primary);
+	}
+
+	.navbar-nav
+	{
+		--nac-nav-link-color       : white;
+		--nac-nav-link-hover-color : var(--nac-primary);
+	}
+
+	.navbar-brand
+	{
+		--nac-navbar-brand-color       : white;
+		--nac-navbar-brand-hover-color : var(--nac-primary);
+	}
+
+	.nav-link.active
+	{
+		--nac-nav-pills-link-active-bg : var(--nac-tertiary-bg-rgb);
+		--nac-navbar-active-color      : var(--nac-primary);
+		border                         : 1px solid var(--nac-primary);
+	}
+
+	.nav-link.active:hover
+	{
+		--nac-nav-pills-link-active-bg : var(--nac-primary);
+		--nac-navbar-active-color      : rgb(var(--nac-tertiary-bg-rgb));
+	}
+
+}
+
+// This seems to be the default
+//$color-mode-type: data;
+
+//@include color-mode(dark) {
+//
+//	// My defaults
+//	$body-color     : #aaaaaa;
+//	$font-size-base : 1.125rem;
+//
+//	$link-color       : white;
+//	$link-hover-color : $primary;
+//
+//	$nav-link-color       : white;
+//	$nav-link-hover-color : $primary;
+//
+//	$body-tertiary-bg : #1e1e1e;
+//}
+
+// Then import Bootstrap
+@import "../lib/node_modules/bootstrap/scss/bootstrap";
+
+//// Functions first
+//@import "../lib/node_modules/bootstrap/scss/functions";
+//
+//// Variable overrides first
+//$primary: #900;
+//$enable-shadows: true;
+//$prefix: "nac-";
+//
+//$body-bg: red;
+//$body-color: green;
+//
+//$tertiary-bg-rgb: black;
+//$navbar-brand-color: red;
+//$navbar-brand-hover-color: #fb8c00;
+//
+//// Required Bootstrap imports
+//@import "../lib/node_modules/bootstrap/scss/variables";
+//@import "../lib/node_modules/bootstrap/scss/variables-dark";
+//@import "../lib/node_modules/bootstrap/scss/maps";
+//@import "../lib/node_modules/bootstrap/scss/mixins";
+//@import "../lib/node_modules/bootstrap/scss/root";
+//
+//// Optional components
+//@import "../lib/node_modules/bootstrap/scss/utilities";
+//@import "../lib/node_modules/bootstrap/scss/reboot";
+//@import "../lib/node_modules/bootstrap/scss/containers";
+//@import "../lib/node_modules/bootstrap/scss/grid";
+//@import "../lib/node_modules/bootstrap/scss/helpers";
+//@import "../lib/node_modules/bootstrap/scss/utilities/api";
+

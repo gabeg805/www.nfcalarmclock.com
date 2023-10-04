@@ -1,63 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+	<!-- Head -->
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>NFC Alarm Clock by Gabe Gonzalez</title>
 
-		<!-- Font -->
-		<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans" rel="stylesheet" type="text/css">
+		<!-- External links -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- External scripts -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 		<!-- CSS -->
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href="./util/common.css"   rel="stylesheet" type="text/css">
-		<link href="./header/header.css" rel="stylesheet" type="text/css">
-		<link href="./footer/footer.css" rel="stylesheet" type="text/css">
-		<link href="./home/home.css"     rel="stylesheet" type="text/css">
-		<link href="./about/about.css"   rel="stylesheet" type="text/css">
+		<link href="./main/defaults.css"     rel="stylesheet" type="text/css">
+		<link href="./main/common.css"       rel="stylesheet" type="text/css">
+		<link href="./navbar/navbar.css"     rel="stylesheet" type="text/css">
+		<link href="./footer/footer.css"     rel="stylesheet" type="text/css">
+		<link href="./intro/intro.css"       rel="stylesheet" type="text/css">
+		<link href="./features/features.css" rel="stylesheet" type="text/css">
+		<link href="./contact/contact.css"   rel="stylesheet" type="text/css">
+		<link href="./donate/donate.css"     rel="stylesheet" type="text/css">
 
 		<!-- Javascript -->
-		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-		<script src="./util/includehtml.js"></script>
-		<script src="./header/showHideHeaderOnScroll.js"></script>
-		<script src="./header/hamburgerIconOnClick.js"></script>
-		<script src="./home/appShowcase.js"></script>
+		<script src="./main/includehtml.js"></script>
 
 		<!-- Includes -->
-		<script>includeHtml("#header", "./header/header.html");</script>
-		<script>includeHtml("#footer", "./footer/footer.html");</script>
-		<script>includeHtml("#home",   "./home/home.html");</script>
-		<!--
-		<script>includeHtml("#about",  "./html/about.html");</script>
-		<body onload="startAppShowcase()">
-		<body>
-		-->
+		<script>includeHtml("#header",   "./navbar/navbar.html");</script>
+		<script>includeHtml("#footer",   "./footer/footer.html");</script>
+		<script>includeHtml("#intro",    "./intro/intro.html");</script>
+		<script>includeHtml("#features", "./features/features.html");</script>
+		<script>includeHtml("#contact",  "./contact/contact.html");</script>
+		<script>includeHtml("#donate",   "./donate/donate.html");</script>
 	</head>
 
-	<body onload="startAppShowcase()">
+	<body>
 
-		<!-- Header -->
-		<header id="header"></header>
+		<!-- Navbar -->
+		<nav id="header" class="navbar navbar-expand-lg bg-body-tertiary"></nav>
 
-		<!-- Body -->
-		<div id="main" class="content-container">
-			<section id="home"></section>
-			<!--
-			<section id="about"></section>
-			-->
-		</div>
+		<!-- Introduction -->
+		<main class="h-100">
+			<section id="intro" class="container h-100"></section>
+		</main>
+		<div class="my-divider"></div>
+
+		<!-- Features -->
+		<section id="features" class="container"></section>
+		<div class="my-divider"></div>
+
+		<!-- Contact -->
+		<section id="contact" class=container"></section>
+		<div class="my-divider"></div>
+
+		<!-- Donate -->
+		<section id="donate" class="container"></section>
 
 		<!-- Footer -->
-		<footer id="footer"></footer>
+		<footer id="footer" class="container"></footer>
 
 	</body>
 </html>
 
-<!-- Have a paper icon at end and "View Resume" -->
-
-		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/animate.css"> -->
-		<!-- <link rel="stylesheet" type="text/css" href="cntl.css"> -->
-		<!-- <\!-- <link rel="stylesheet" href="reset.css"> <\\!-- CSS reset -\\-> -\-> -->
-		<!-- <link rel="stylesheet" href="style.css"> <\!-- Resource style -\-> -->
-		<!-- <script src="modernizr.js"></script> <\!-- Modernizr -\-> -->

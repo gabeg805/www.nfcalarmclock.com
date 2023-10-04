@@ -1,0 +1,21 @@
+/* Group for a particular thing the user will enter */
+.form-group
+{
+	margin-top    : 30px;
+	margin-bottom : 30px;
+	text-align    : start;
+}
+
+/* Text area where a user will enter a message */
+.form-control.textarea
+{
+	resize : vertical;
+}
+
+/* Label right above each entry box indicating what a thing is for */
+.form-label
+{
+	color       : var(--nac-primary);
+	font-weight : bold;
+}
+

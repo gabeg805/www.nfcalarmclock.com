@@ -1,0 +1,27 @@
+/* ----------- */
+/* PC settings */
+/* ----------- */
+
+/* Google play store badge */
+#google-play,
+#google-play img
+{
+	width : 150px;
+}
+
+/* -------------- */
+/* Phone settings */
+/* -------------- */
+
+@media screen and (max-width : 1080px)
+{
+
+	/* Google play store badge */
+	#google-play,
+	#google-play img
+	{
+		width : 300px;
+	}
+
+}
+

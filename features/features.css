@@ -1,0 +1,9 @@
+/* Images in this section */
+.feature-img
+{
+	height : 100vh;
+	border-radius : 10px;
+	display : block;
+	margin : 30px auto 60px;
+}
+
