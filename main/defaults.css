@@ -1,37 +1,4 @@
 @charset "UTF-8";
-[data-bs-theme=dark] {
-  --nac-body-color: #aaaaaa;
-  --nac-body-font-size: 1.125rem;
-}
-[data-bs-theme=dark] a {
-  --nac-link-color-rgb: 255, 255, 255;
-}
-[data-bs-theme=dark] a:hover {
-  --nac-link-hover-color-rgb: 251, 140, 0;
-}
-[data-bs-theme=dark] .navbar {
-  --nac-tertiary-bg-rgb: 30, 30, 30;
-  --nac-navbar-brand-color: white;
-  --nac-navbar-brand-hover-color: var(--nac-primary);
-}
-[data-bs-theme=dark] .navbar-nav {
-  --nac-nav-link-color: white;
-  --nac-nav-link-hover-color: var(--nac-primary);
-}
-[data-bs-theme=dark] .navbar-brand {
-  --nac-navbar-brand-color: white;
-  --nac-navbar-brand-hover-color: var(--nac-primary);
-}
-[data-bs-theme=dark] .nav-link.active {
-  --nac-nav-pills-link-active-bg: var(--nac-tertiary-bg-rgb);
-  --nac-navbar-active-color: var(--nac-primary);
-  border: 1px solid var(--nac-primary);
-}
-[data-bs-theme=dark] .nav-link.active:hover {
-  --nac-nav-pills-link-active-bg: var(--nac-primary);
-  --nac-navbar-active-color: rgb(var(--nac-tertiary-bg-rgb));
-}
-
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11920,6 +11887,54 @@ textarea.form-control-lg {
   }
   .d-print-none {
     display: none !important;
+  }
+}
+[data-bs-theme=dark] {
+  --nac-body-color: #aaaaaa;
+  --nac-body-font-size: 1.125rem;
+  --nac-gutter-x: 3rem;
+}
+[data-bs-theme=dark] html,
+[data-bs-theme=dark] body {
+  height: 100%;
+}
+[data-bs-theme=dark] section {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+[data-bs-theme=dark] section:first-child {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+[data-bs-theme=dark] h1, [data-bs-theme=dark] .h1 {
+  font-weight: bold;
+}
+[data-bs-theme=dark] h1 a, [data-bs-theme=dark] .h1 a {
+  text-decoration: none;
+}
+[data-bs-theme=dark] h2, [data-bs-theme=dark] .h2 {
+  color: var(--nac-primary);
+  font-weight: bold;
+}
+[data-bs-theme=dark] h1 + p, [data-bs-theme=dark] .h1 + p,
+[data-bs-theme=dark] h2 + p,
+[data-bs-theme=dark] .h2 + p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+[data-bs-theme=dark] a {
+  --nac-link-color-rgb: 255, 255, 255;
+}
+[data-bs-theme=dark] a:hover {
+  --nac-link-hover-color-rgb: 251, 140, 0;
+}
+@media (min-width: 992px) {
+  [data-bs-theme=dark] {
+    --nac-gutter-x: 1.5rem;
+  }
+  [data-bs-theme=dark] section {
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
 }
 

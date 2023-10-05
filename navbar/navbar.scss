@@ -1,0 +1,126 @@
+// Imports
+@import "../lib/node_modules/bootstrap/scss/functions";
+@import "../lib/node_modules/bootstrap/scss/variables";
+@import "../lib/node_modules/bootstrap/scss/mixins";
+
+// Dark theme
+[data-bs-theme="dark"]
+{
+
+	// 
+	// DEFAULT SCREEN
+	// 
+
+	// Main navbar settings
+	.navbar
+	{
+		// Background
+		--nac-tertiary-bg-rgb            : #{to-rgb(#1e1e1e)};
+
+		// Brand
+		--nac-navbar-brand-color         : white;
+		--nac-navbar-brand-hover-color   : var(--nac-primary);
+
+		// Hamburger icon border width
+		--nac-navbar-toggler-focus-width : 2px;
+	}
+
+	// Default navbar brand settings (this is on the left side)
+	.navbar-brand
+	{
+		// Colors
+		--nac-navbar-brand-color       : white;
+		--nac-navbar-brand-hover-color : var(--nac-primary);
+	}
+
+	// Default navbar navigation settings (this is on the right side)
+	.navbar-nav
+	{
+		// Link colors
+		--nac-nav-link-color       : white;
+		--nac-nav-link-hover-color : var(--nac-primary);
+
+		// Padding to separate it a little bit from the top navbar when it expands
+		// downwards
+		padding-top                : 1.5rem;
+	}
+
+	// Navigation link settings
+	.nav-link
+	{
+		// When the link is active
+		&.active
+		{
+			// Clear the border. The hamburger icon will be shown so the active border 
+			// will just look weird
+			border : none;
+		}
+
+	}
+
+	// Navbar container that is collapsable
+	.navbar-collapse
+	{
+		// Center the text. When the container is expanded, this seems to do nothing,
+		// but when it is collapsed in the hamburger icon, this does exactly what it
+		// should do
+		text-align: center;
+	}
+
+	// 
+	// COMPUTER SCREEN
+	// 
+
+	// scss-docs-start navbar-expand-loop
+	// Generate series of `.navbar-expand-*` responsive classes for configuring
+	// where your navbar collapses.
+	.navbar-expand
+	{
+		@each $breakpoint in map-keys($grid-breakpoints)
+		{
+			$next: breakpoint-next($breakpoint, $grid-breakpoints);
+			$infix: breakpoint-infix($next, $grid-breakpoints);
+
+			// stylelint-disable-next-line scss/selector-no-union-class-name
+			&#{$infix}
+			{
+				@include media-breakpoint-up($next)
+				{
+
+					// Default navbar navigation settings (this is on the right side)
+					.navbar-nav
+					{
+						// Disable the padding that was set for the phone, when the navbar
+						// expands downwards
+						padding-top : 0;
+					}
+
+					// Navigation link settings
+					.nav-link
+					{
+						// When the link is active
+						&.active
+						{
+							// Colors for the active link
+							--nac-nav-pills-link-active-bg : var(--nac-tertiary-bg-rgb);
+							--nac-navbar-active-color      : var(--nac-primary);
+							border                         : 1px solid var(--nac-primary);
+
+							// When the active link is hovered
+							&:hover
+							{
+								--nac-nav-pills-link-active-bg : var(--nac-primary);
+								--nac-navbar-active-color      : rgb(var(--nac-tertiary-bg-rgb));
+							}
+
+						}
+
+					}
+
+				}
+			}
+		}
+	}
+
+}
+

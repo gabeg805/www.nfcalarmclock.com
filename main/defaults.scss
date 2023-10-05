@@ -1,61 +1,10 @@
-@import "../lib/node_modules/bootstrap/scss/functions";
+@import "../../lib/node_modules/bootstrap/scss/functions";
 //@import "../lib/node_modules/bootstrap/scss/variables";
-//@import "../lib/node_modules/bootstrap/scss/mixins";
 
 // Variable overrides first
 $primary: #fb8c00;
 $enable-shadows: true;
 $prefix: "nac-";
-
-[data-bs-theme="dark"] {
-
-	--nac-body-color : #aaaaaa;
-	--nac-body-font-size : 1.125rem;
-
-	a
-	{
-		--nac-link-color-rgb : #{to-rgb(white)};
-	}
-
-	a:hover
-	{
-		--nac-link-hover-color-rgb : #{to-rgb($primary)};
-	}
-
-	// Navbar
-	.navbar
-	{
-		--nac-tertiary-bg-rgb          : #{to-rgb(#1e1e1e)};
-		--nac-navbar-brand-color       : white;
-		--nac-navbar-brand-hover-color : var(--nac-primary);
-	}
-
-	.navbar-nav
-	{
-		--nac-nav-link-color       : white;
-		--nac-nav-link-hover-color : var(--nac-primary);
-	}
-
-	.navbar-brand
-	{
-		--nac-navbar-brand-color       : white;
-		--nac-navbar-brand-hover-color : var(--nac-primary);
-	}
-
-	.nav-link.active
-	{
-		--nac-nav-pills-link-active-bg : var(--nac-tertiary-bg-rgb);
-		--nac-navbar-active-color      : var(--nac-primary);
-		border                         : 1px solid var(--nac-primary);
-	}
-
-	.nav-link.active:hover
-	{
-		--nac-nav-pills-link-active-bg : var(--nac-primary);
-		--nac-navbar-active-color      : rgb(var(--nac-tertiary-bg-rgb));
-	}
-
-}
 
 // This seems to be the default
 //$color-mode-type: data;
@@ -76,7 +25,90 @@ $prefix: "nac-";
 //}
 
 // Then import Bootstrap
-@import "../lib/node_modules/bootstrap/scss/bootstrap";
+@import "../../lib/node_modules/bootstrap/scss/bootstrap";
+
+// Set default settings (Dark theme is the default for this website)
+[data-bs-theme="dark"]
+{
+
+	// 
+	// DEFAULT SCREEN
+	// 
+
+	--nac-body-color : #aaaaaa;
+	--nac-body-font-size : 1.125rem;
+	--nac-gutter-x : 3rem;
+
+	html,
+	body
+	{
+		height : 100%;
+	}
+
+	section
+	{
+		padding-top    : 6%;
+		padding-bottom : 6%;
+
+		&:first-child
+		{
+			padding-top    : 0;
+			padding-bottom : 0;
+		}
+
+	}
+
+	h1
+	{
+		font-weight : bold;
+
+		a
+		{
+			text-decoration : none;
+		}
+	}
+
+	h2
+	{
+		color       : var(--nac-primary);
+		font-weight : bold;
+	}
+
+	h1 + p,
+	h2 + p
+	{
+		margin-top    : 25px;
+		margin-bottom : 25px;
+	}
+
+	a
+	{
+		--nac-link-color-rgb : #{to-rgb(white)};
+
+		&:hover
+		{
+			--nac-link-hover-color-rgb : #{to-rgb($primary)};
+		}
+	}
+
+	// 
+	// COMPUTER SCREEN
+	// 
+
+	@include media-breakpoint-up(lg)
+	{
+		--nac-gutter-x : 1.5rem;
+
+		// Make section padding a little smaller on bigger screens
+		section
+		{
+			padding-top    : 3%;
+			padding-bottom : 3%;
+		}
+
+	}
+
+}
 
 //// Functions first
 //@import "../lib/node_modules/bootstrap/scss/functions";
