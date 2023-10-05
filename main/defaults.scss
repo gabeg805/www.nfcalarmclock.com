@@ -1,4 +1,4 @@
-@import "../../lib/node_modules/bootstrap/scss/functions";
+@import "../lib/node_modules/bootstrap/scss/functions";
 //@import "../lib/node_modules/bootstrap/scss/variables";
 
 // Variable overrides first
@@ -25,7 +25,7 @@ $prefix: "nac-";
 //}
 
 // Then import Bootstrap
-@import "../../lib/node_modules/bootstrap/scss/bootstrap";
+@import "../lib/node_modules/bootstrap/scss/bootstrap";
 
 // Set default settings (Dark theme is the default for this website)
 [data-bs-theme="dark"]
