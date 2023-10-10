@@ -1,0 +1,200 @@
+// Imports
+@use "sass:math";
+@import "../lib/node_modules/bootstrap/scss/functions";
+@import "../lib/node_modules/bootstrap/scss/variables";
+@import "../lib/node_modules/bootstrap/scss/mixins";
+
+$feature-image-aspect-ration    : math.div(108, 215);
+$feature-image-height           : 75vh;
+$feature-image-width            : $feature-image-height * $feature-image-aspect-ration;
+$feature-caption-width          : $feature-image-width;
+$feature-control-button-size    : 48px;
+$feature-control-button-padding : math.div($feature-control-button-size, 2);
+
+// Feature image
+.feature-img
+{
+	// Size the image (1080x2150)
+	aspect-ratio : $feature-image-aspect-ration;
+	height : $feature-image-height;
+	max-width : 1080px;
+
+	// Round the edges of the image
+	border-radius : 10px;
+}
+
+// Carousel buttons to go previous and next
+.carousel-control-next,
+.carousel-control-prev
+{
+	padding : 0 $feature-control-button-padding;
+	width : auto;
+}
+
+// Previous button
+.carousel-control-prev
+{
+	left : auto;
+	// For phones
+	right : calc(50% + ($feature-image-width - $feature-control-button-size)/2 - $feature-control-button-padding);
+	//right : calc(50% + $feature-image-width/2 + 0*$feature-control-button-size/2);
+}
+
+// Next button
+.carousel-control-next
+{
+	// For phones
+	left : calc(50% + ($feature-image-width - $feature-control-button-size)/2 - $feature-control-button-padding);
+	//left : calc(50% + $feature-image-width/2 + 0*$feature-control-button-size/2);
+	right : auto;
+}
+
+//.carousel-control-next,
+//.carousel-control-prev
+//{
+//	padding : 0 48px;
+//	position : static;
+//	width : auto;
+//}
+//
+//.carousel-inner
+//{
+//	margin-left : 0;
+//	margin-right : 0;
+//}
+//
+//.carousel-item
+//{
+//	float : left;
+//	margin : 0;
+//	padding-left : 0;
+//	padding-right : 0;
+//	position : relative;
+//	//position : static;
+//	width : auto;
+//}
+//
+////.carousel-item.active, .carousel-item-next, .carousel-item-prev
+////{
+////	display : inline;
+////}
+
+// Dark theme
+[data-bs-theme="dark"]
+{
+
+	// Carousel
+	.carousel
+	{
+
+		// Page indicator
+		.carousel-indicators [data-bs-target],
+		& .carousel-indicators [data-bs-target]
+		{
+			background-color: white;
+			opacity : 0.25;
+		}
+
+		// Page caption
+		.carousel-caption,
+		& .carousel-caption
+		{
+			color: white;
+		}
+
+	}
+
+	// Page caption
+	.carousel-caption
+	{
+		// Have a backdrop behind the caption to make reading it easier
+		background-color : rgba(0, 0, 0, 0.5);
+
+		// Center and position the caption
+		bottom : 0;
+		margin : 0 auto;
+		padding : 1rem 1.5rem;
+		//position : static;
+
+		// Size of the caption
+		width : $feature-caption-width;
+
+		// Page title
+		h5
+		{
+			color : var(--nac-primary);
+			font-weight : bold;
+		}
+
+	}
+
+	// Page indicator
+	.carousel-indicators
+	{
+		margin-top : 1rem;
+		margin-bottom : 0;
+		position : static;
+
+		// Active page
+		.active
+		{
+			// Make the color of the page obvious
+			opacity : 1 !important;
+		}
+
+	}
+
+}
+
+// 
+// COMPUTER SCREEN
+// 
+
+@include media-breakpoint-up(lg)
+{
+	$feature-image-height           : 90vh;
+	$feature-image-width            : $feature-image-height * $feature-image-aspect-ration;
+	$feature-caption-width          : $feature-image-width;
+	$feature-control-button-padding : $feature-control-button-size;
+
+	// Feature image
+	.feature-img
+	{
+		// Size the image (1080x2150)
+		height : $feature-image-height;
+	}
+
+	// Carousel buttons to go previous and next
+	.carousel-control-next,
+	.carousel-control-prev
+	{
+		padding : 0 $feature-control-button-padding;
+	}
+
+	// Previous button
+	.carousel-control-prev
+	{
+		right : calc(50% + $feature-image-width/2);
+	}
+
+	// Next button
+	.carousel-control-next
+	{
+		left : calc(50% + $feature-image-width/2);
+	}
+
+	// Dark theme
+	[data-bs-theme="dark"]
+	{
+
+		// Page caption
+		.carousel-caption
+		{
+			// Size of the caption
+			width : $feature-caption-width;
+		}
+
+	}
+
+}
+
