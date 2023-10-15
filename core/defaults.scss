@@ -141,11 +141,12 @@ $prefix: "nac-";
 		font-weight : bold;
 	}
 
+	h1 + span + p,
 	h1 + p,
 	h2 + p
 	{
-		margin-top    : 25px;
-		margin-bottom : 25px;
+		padding-top    : 25px;
+		padding-bottom : 25px;
 	}
 
 	a
@@ -156,6 +157,13 @@ $prefix: "nac-";
 		{
 			--nac-link-hover-color-rgb : #{to-rgb($primary)};
 		}
+	}
+
+	.subtitle
+	{
+		color     : white;
+		font-size : 0.8em;
+		opacity   : 0.85;
 	}
 
 	// 

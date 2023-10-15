@@ -23,12 +23,20 @@ $feature-control-button-padding : math.div($feature-control-button-size, 2);
 	border-radius : 10px;
 }
 
+// Carousel
+.carousel
+{
+	padding-top    : 25px;
+	padding-bottom : 25px;
+}
+
 // Carousel buttons to go previous and next
 .carousel-control-next,
 .carousel-control-prev
 {
 	padding : 0 $feature-control-button-padding;
 	width : auto;
+	opacity : 1;
 }
 
 // Previous button
@@ -48,6 +56,46 @@ $feature-control-button-padding : math.div($feature-control-button-size, 2);
 	//left : calc(50% + $feature-image-width/2 + 0*$feature-control-button-size/2);
 	right : auto;
 }
+
+.carousel-control-prev .fa-circle,
+.carousel-control-next .fa-circle
+{
+	color      : #101010;
+	transition : color 1s ease;
+}
+
+.carousel-control-prev .fa-arrow-left,
+.carousel-control-next .fa-arrow-right
+{
+	//color : #212529;
+	color      : #F0F0F0;
+	transition : color 1s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus
+{
+	opacity : 1;
+
+	.fa-circle
+	{
+		color : white;
+	}
+
+	.fa-arrow-left,
+	.fa-arrow-right
+	{
+		color : #101010;
+	}
+
+}
+
+//.carousel-control-prev .fa-arrow-left
+//{
+//	color : white;
+//}
 
 //.carousel-control-next,
 //.carousel-control-prev
@@ -108,7 +156,7 @@ $feature-control-button-padding : math.div($feature-control-button-size, 2);
 	.carousel-caption
 	{
 		// Have a backdrop behind the caption to make reading it easier
-		background-color : rgba(0, 0, 0, 0.5);
+		background-color : rgba(0, 0, 0, 0.85);
 
 		// Center and position the caption
 		bottom : 0;

@@ -5,10 +5,16 @@
   border-radius: 10px;
 }
 
+.carousel {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .carousel-control-next,
 .carousel-control-prev {
   padding: 0 24px;
   width: auto;
+  opacity: 1;
 }
 
 .carousel-control-prev {
@@ -21,6 +27,41 @@
   right: auto;
 }
 
+.carousel-control-prev .fa-circle,
+.carousel-control-next .fa-circle {
+  color: #101010;
+  transition: color 1s ease;
+}
+
+.carousel-control-prev .fa-arrow-left,
+.carousel-control-next .fa-arrow-right {
+  color: #F0F0F0;
+  transition: color 1s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  opacity: 1;
+}
+.carousel-control-prev:hover .fa-circle,
+.carousel-control-prev:focus .fa-circle,
+.carousel-control-next:hover .fa-circle,
+.carousel-control-next:focus .fa-circle {
+  color: white;
+}
+.carousel-control-prev:hover .fa-arrow-left,
+.carousel-control-prev:hover .fa-arrow-right,
+.carousel-control-prev:focus .fa-arrow-left,
+.carousel-control-prev:focus .fa-arrow-right,
+.carousel-control-next:hover .fa-arrow-left,
+.carousel-control-next:hover .fa-arrow-right,
+.carousel-control-next:focus .fa-arrow-left,
+.carousel-control-next:focus .fa-arrow-right {
+  color: #101010;
+}
+
 [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target] {
   background-color: white;
   opacity: 0.25;
@@ -29,7 +70,7 @@
   color: white;
 }
 [data-bs-theme=dark] .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   bottom: 0;
   margin: 0 auto;
   padding: 1rem 1.5rem;

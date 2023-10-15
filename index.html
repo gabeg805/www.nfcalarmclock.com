@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Title -->
-		<title>NFC Alarm Clock by Gabe Gonzalez</title>
+		<title>NFC Alarm Clock</title>
 
 		<!-- My CSS -->
 		<link href="./core/defaults.css" rel="stylesheet" type="text/css">
@@ -19,16 +19,13 @@
 		<link href="./home/contact.css"  rel="stylesheet" type="text/css">
 		<link href="./home/donate.css"   rel="stylesheet" type="text/css">
 
-		<!-- My javascript -->
-		<script src="../home/contact.js"></script>
-
 	</head>
 
 	<!-- Body -->
 	<body>
 
 		<!-- Navbar -->
-		<nav id="header" class="navbar navbar-expand-lg bg-body-tertiary">
+		<nav id="header" class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
 
 			<!-- Container -->
 			<div class="container">
@@ -57,8 +54,10 @@
 
 				</div> <!-- Collapsable navbar items -->
 			</div> <!-- Container -->
+		</nav> <!-- Navbar -->
 
-		</nav>
+		<!-- TODO: Scroll spy to make navbar item active -->
+		<div data-spy="scroll" data-target="#header" data-offset="0">
 
 		<!-- Introduction -->
 		<main class="h-100">
@@ -74,6 +73,7 @@
 							NFC Alarm Clock
 						</a>
 					</h1>
+					<span class="subtitle">by Gabe Gonzalez</span>
 
 					<!-- Description -->
 					<p class="col-lg-8 mx-auto fs-5 text-muted">
@@ -107,16 +107,18 @@
 		<section id="features" class="container">
 
 			<!-- Vertically and horizontally center content at max height -->
-			<div class="col-lg-12 mx-auto justify-content-center align-items-center text-center">
+			<div class="col-lg-8 mx-auto justify-content-center align-items-center text-center">
 
 				<!-- Title -->
 				<h1><a href="#features">Features</a></h1>
 
 				<!-- Description -->
 				<p class="fs-5 text-muted">
-					The <b>NFC Alarm Clock</b> app has a bunch of different features and
-					ways to customize how the app looks.  You can personalize it to make it
-					look exactly like you want it!
+					The <b>NFC Alarm Clock</b> app has a bunch of different ways to
+					customize how it looks.
+					<br>
+					<br>
+					Personalize it to make it look exactly how you want!
 				</p>
 
 				<div id="carouselExampleCaptions" class="carousel slide">
@@ -126,7 +128,7 @@
 						<!-- Main screen -->
 						<div class="carousel-item active">
 							<img src="../home/img/main_screen.webp" class="d-block feature-img mx-auto" fetchpriority="high" loading="lazy" alt="Main screen">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>Main screen</h5>
 								<p>
 									This is the main screen of the app, where you'll be able to see all
@@ -138,7 +140,7 @@
 						<!-- Expand alarm -->
 						<div class="carousel-item">
 							<img src="../home/img/main_screen_expanded.webp" class="d-block feature-img mx-auto" fetchpriority="high" loading="lazy" alt="Expanded alarm">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>Expand alarm</h5>
 								<p>
 									Click on an alarm to expand it.
@@ -149,7 +151,7 @@
 						<!-- Alarm options -->
 						<div class="carousel-item">
 							<img src="../home/img/main_screen_alarm_options.webp" class="d-block feature-img mx-auto" fetchpriority="low" loading="lazy" alt="Alarm options">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>Alarm options</h5>
 								<p>
 									Click on this button to tweak different alarm options.
@@ -160,7 +162,7 @@
 						<!-- Settings -->
 						<div class="carousel-item">
 							<img src="../home/img/settings.webp" class="d-block feature-img mx-auto" fetchpriority="low" loading="lazy" alt="In-app settings">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>Main Settings</h5>
 								<p>
 									This is the Settings screen where you can access all the different
@@ -172,7 +174,7 @@
 						<!-- General -->
 						<div class="carousel-item">
 							<img src="../home/img/settings_general.webp" class="d-block feature-img mx-auto" fetchpriority="low" loading="lazy" alt="General settings">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>General settings</h5>
 								<p>
 									Set default alarm settings like when to automatically dismiss an alarm,
@@ -184,7 +186,7 @@
 						<!-- Appearance -->
 						<div class="carousel-item">
 							<img src="../home/img/settings_appearance_colors.webp" class="d-block feature-img mx-auto" fetchpriority="low" loading="lazy" alt="Appearance settings to tweak colors">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>Appearance</h5>
 								<p>
 									Change the appearance of the app such as the different colors to use,
@@ -196,7 +198,7 @@
 						<!-- Statistics -->
 						<div class="carousel-item">
 							<img src="../home/img/settings_statistics.webp" class="d-block feature-img mx-auto" fetchpriority="low" loading="lazy" alt="Statistics settings">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>Statistics</h5>
 								<p>
 									View statistics such as how many alarms you've dismissed, how long
@@ -208,7 +210,7 @@
 						<!-- About -->
 						<div class="carousel-item">
 							<img src="../home/img/settings_about.webp" class="d-block feature-img mx-auto" fetchpriority="low" loading="lazy" alt="Main screen">
-							<div class="carousel-caption d-none d-md-block">
+							<div class="carousel-caption d-md-block">
 								<h5>About</h5>
 								<p>
 									See who developed the app (me!), the current version of the app you are
@@ -221,17 +223,19 @@
 
 					<!-- Previous button -->
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" aria-label="Previous feature">
-						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16" aria-hidden="true">
-							<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-						</svg>
+						<span class="fa-stack" aria-hidden="true">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
+						</span>
 						<span class="visually-hidden">Previous</span>
 					</button>
 
 					<!-- Next button -->
 					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" aria-label="Next feature">
-						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16" aria-hidden="true">
-							<path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-						</svg>
+						<span class="fa-stack" aria-hidden="true">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
+						</span>
 						<span class="visually-hidden">Next</span>
 					</button>
 
@@ -248,10 +252,8 @@
 					</div>
 
 				</div> <!-- Carousel -->
-
 			</div> <!-- V/H centered -->
-
-		</section>
+		</section> <!-- Features -->
 
 		<!-- Divider -->
 		<div class="my-divider"></div>
@@ -288,17 +290,13 @@
 					</div>
 
 					<!-- Send button -->
-					<button class="btn btn-primary" type="submit" onclick="sendEmailToAwsApi(event)">Submit</button>
-					<!--
-					Add a thing here to indicate whether contact was made or not
-					<div></div>
-					-->
+					<button id="contact-send" class="btn btn-primary" type="submit" onclick="sendEmailToAwsApi(event)">
+						<span>Send</span><i class="fa"></i>
+					</button>
 
-				</form>
-
+				</form> <!-- Form -->
 			</div> <!-- V/H centered -->
-
-		</section>
+		</section> <!-- Contact -->
 
 		<!-- Divider -->
 		<div class="my-divider"></div>
@@ -376,7 +374,7 @@
 					<!-- Github -->
 					<li>
 						<a href="http://github.com/gabeg805/NFC-Alarm-Clock/" class="github-icon" role="button" aria-label="Github repository">
-							<img src="../footer/img/github-mark.svg" width="28" height="28" alt="Github">
+							<i class="fa fa-github"></i>
 						</a>
 					</li>
 
@@ -385,9 +383,16 @@
 			</div> <!-- Footer container -->
 
 		</footer>
+		</div>
 
 		<!-- External javascript -->
 		<script defer src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<!-- External CSS -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- My javascript -->
+		<script src="../home/contact.js"></script>
 
 	</body>
 </html>

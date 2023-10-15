@@ -19,3 +19,35 @@
 	font-weight : bold;
 }
 
+/* Normal span style */
+#contact-send > span
+{
+	margin-left  : 0.5rem;
+	margin-right : 0.5rem;
+}
+
+/* Normal i style */
+#contact-send > i
+{
+	display   : none;
+	font-size : 1rem;
+}
+
+/* Span style when send is active */
+.is-sending > span
+{
+	margin-left : 0.85rem !important;
+}
+
+/* i style when send is active */
+.is-sending > i
+{
+	display      : inline-block !important;
+	margin-right : 0.5rem !important;
+}
+
+/*
+	color : var(--nac-form-invalid-color);
+	color : var(--nac-form-valid-color);
+*/
+

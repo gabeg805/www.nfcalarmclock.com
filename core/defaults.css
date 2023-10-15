@@ -11935,17 +11935,24 @@ textarea.form-control-lg {
   color: var(--nac-primary);
   font-weight: bold;
 }
-[data-bs-theme=dark] h1 + p, [data-bs-theme=dark] .h1 + p,
+[data-bs-theme=dark] h1 + span + p, [data-bs-theme=dark] .h1 + span + p,
+[data-bs-theme=dark] h1 + p,
+[data-bs-theme=dark] .h1 + p,
 [data-bs-theme=dark] h2 + p,
 [data-bs-theme=dark] .h2 + p {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 [data-bs-theme=dark] a {
   --nac-link-color-rgb: 255, 255, 255;
 }
 [data-bs-theme=dark] a:hover {
   --nac-link-hover-color-rgb: 251, 140, 0;
+}
+[data-bs-theme=dark] .subtitle {
+  color: white;
+  font-size: 0.8em;
+  opacity: 0.85;
 }
 @media (min-width: 992px) {
   [data-bs-theme=dark] {
