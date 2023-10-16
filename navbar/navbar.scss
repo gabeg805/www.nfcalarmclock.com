@@ -58,6 +58,13 @@
 
 	}
 
+	// When a navigation link is in focus but it is not active, change its color
+	// back to normal
+	.nav-link:focus:not(.active)
+	{
+		color : white;
+	}
+
 	// Navbar container that is collapsable
 	.navbar-collapse
 	{

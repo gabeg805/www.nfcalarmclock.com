@@ -11914,6 +11914,9 @@ textarea.form-control-lg {
 [data-bs-theme=dark] body {
   height: 100%;
 }
+[data-bs-theme=dark] body {
+  position: relative;
+}
 [data-bs-theme=dark] section {
   padding-top: 9%;
   padding-bottom: 9%;

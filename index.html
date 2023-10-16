@@ -22,7 +22,7 @@
 	</head>
 
 	<!-- Body -->
-	<body>
+	<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-smooth-scroll="true">
 
 		<!-- Navbar -->
 		<nav id="header" class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
@@ -45,19 +45,24 @@
 				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
 					<!-- Navbar items  -->
-					<div class="navbar-nav nav-pills">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
-						<a class="nav-link" href="#features">Features</a>
-						<a class="nav-link" href="#contact">Contact</a>
-						<a class="nav-link" href="#donate">Donate</a>
+					<ul class="navbar-nav nav-pills">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#intro">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#features">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#donate">Donate</a>
+						</li>
 					</ul>
 
 				</div> <!-- Collapsable navbar items -->
 			</div> <!-- Container -->
 		</nav> <!-- Navbar -->
-
-		<!-- TODO: Scroll spy to make navbar item active -->
-		<div data-spy="scroll" data-target="#header" data-offset="0">
 
 		<!-- Introduction -->
 		<main class="h-100">
@@ -383,7 +388,6 @@
 			</div> <!-- Footer container -->
 
 		</footer>
-		</div>
 
 		<!-- External javascript -->
 		<script defer src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

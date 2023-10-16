@@ -16,6 +16,9 @@
 [data-bs-theme=dark] .nav-link.active {
   border: none;
 }
+[data-bs-theme=dark] .nav-link:focus:not(.active) {
+  color: white;
+}
 [data-bs-theme=dark] .navbar-collapse {
   text-align: center;
 }
