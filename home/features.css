@@ -5,6 +5,14 @@
   border-radius: 10px;
 }
 
+.fa-stack {
+  font-size: 1.75rem;
+}
+
+.fa-stack > i {
+  vertical-align: middle;
+}
+
 .carousel {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -72,8 +80,10 @@
 [data-bs-theme=dark] .carousel-caption {
   background-color: rgba(0, 0, 0, 0.85);
   bottom: 0;
+  left: 0;
   margin: 0 auto;
   padding: 1rem 1.5rem;
+  right: 0;
   width: 37.6744186047vh;
 }
 [data-bs-theme=dark] .carousel-caption h5 {

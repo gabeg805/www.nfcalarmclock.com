@@ -23,6 +23,16 @@ $feature-control-button-padding : math.div($feature-control-button-size, 2);
 	border-radius : 10px;
 }
 
+.fa-stack
+{
+	font-size : 1.75rem;
+}
+
+.fa-stack > i
+{
+	vertical-align : middle;
+}
+
 // Carousel
 .carousel
 {
@@ -159,10 +169,11 @@ $feature-control-button-padding : math.div($feature-control-button-size, 2);
 		background-color : rgba(0, 0, 0, 0.85);
 
 		// Center and position the caption
-		bottom : 0;
-		margin : 0 auto;
+		bottom  : 0;
+		left    : 0;
+		margin  : 0 auto;
 		padding : 1rem 1.5rem;
-		//position : static;
+		right   : 0;
 
 		// Size of the caption
 		width : $feature-caption-width;
