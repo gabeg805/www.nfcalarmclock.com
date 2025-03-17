@@ -11918,8 +11918,8 @@ textarea.form-control-lg {
   position: relative;
 }
 [data-bs-theme=dark] section {
-  padding-top: 9%;
-  padding-bottom: 9%;
+  padding-top: 12%;
+  padding-bottom: 12%;
 }
 [data-bs-theme=dark] section:first-child {
   padding-top: 0;
@@ -11962,8 +11962,8 @@ textarea.form-control-lg {
     --nac-gutter-x: 1.5rem;
   }
   [data-bs-theme=dark] section {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 6%;
+    padding-bottom: 6%;
   }
 }
 

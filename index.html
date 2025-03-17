@@ -1,5 +1,9 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
+<!--
+	TODO:
+		CORS
+-->
 
 	<!-- Head -->
 	<head>
@@ -109,6 +113,10 @@
 		<div class="my-divider"></div>
 
 		<!-- Features -->
+		<!--
+			TODO:
+				Change wording of captions.
+		-->
 		<section id="features" class="container">
 
 			<!-- Vertically and horizontally center content at max height -->
@@ -298,6 +306,12 @@
 					<button id="contact-send" class="btn btn-primary" type="submit" onclick="sendEmailToAwsApi(event)">
 						<span>Send</span><i class="fa"></i>
 					</button>
+
+					<!-- Status of send -->
+					<div id="contact-empty-feedback"> </div>
+					<div id="contact-success-feedback" class="valid-feedback">Message sent!</div>
+					<div id="contact-failure-feedback" class="invalid-feedback">Oh no! Error sending message</div>
+					
 
 				</form> <!-- Form -->
 			</div> <!-- V/H centered -->

@@ -46,6 +46,21 @@
 	margin-right : 0.5rem !important;
 }
 
+/* Contact feedback */
+#contact-empty-feedback,
+#contact-success-feedback,
+#contact-failure-feedback
+{
+	padding-top : 0.25rem;
+}
+
+#contact-empty-feedback
+{
+	display : block;
+	height  : 1.72rem;
+	margin-top : 0.25rem;
+}
+
 /*
 	color : var(--nac-form-invalid-color);
 	color : var(--nac-form-valid-color);

@@ -5,6 +5,9 @@ let awsApiWebsite = "https://nooypgt7c6.execute-api.us-east-1.amazonaws.com/prod
 let emailElement = document.getElementById("userEmail");
 let messageElement = document.getElementById("userMessage");
 let contactSendButton = document.getElementById("contact-send");
+let contactSuccessFeedback = document.getElementById("contact-success-feedback");
+let contactFailureFeedback = document.getElementById("contact-failure-feedback");
+let contactEmptyFeedback = document.getElementById("contact-empty-feedback");
 let fontAwesomeIcon = contactSendButton.getElementsByClassName("fa")[0];
 
 // Sending status icon classes
@@ -44,7 +47,7 @@ function sendEmailToAwsApi(event)
 	xmlHttp.setRequestHeader("Content-Type", "application/json");
 	xmlHttp.send(JSON.stringify(data));
 
-	setLoadingIcon();
+	addLoadingIcon();
 
 	// Handler function for when the ready state changes
 	xmlHttp.onreadystatechange = function() {
@@ -54,18 +57,31 @@ function sendEmailToAwsApi(event)
 
 			if (xmlHttp.status === 200)
 			{
-				console.log("Success!");
-				setSuccessIcon();
-				//setFailureIcon();
+				showSuccessMessage();
+				removeLoadingIcon();
 			}
 			else
 			{
-				console.log("Failure");
-				setFailureIcon();
+				showFailureMessage();
+				removeLoadingIcon();
 			}
 		}
 	}
 
+}
+
+// 
+// Add the loading icon when the message is sending.
+// 
+function addLoadingIcon()
+{
+	// Indicate that sending of message is active
+	contactSendButton.classList.add(sendActiveClass);
+
+	// Add the loading icon classes
+	loadingIconClasses.forEach(function (c) {
+		fontAwesomeIcon.classList.add(c);
+	});
 }
 
 // 
@@ -144,6 +160,17 @@ function isMessageValid(message)
 }
 
 // 
+// Remove the loading icon
+// 
+function removeLoadingIcon()
+{
+	// Remove the loading icon classes
+	loadingIconClasses.forEach(function (c) {
+		fontAwesomeIcon.classList.remove(c);
+	});
+}
+
+// 
 // Set the class list of the email based on if it is valid or not.
 // 
 function setEmailValidityClassList(isValid)
@@ -188,55 +215,24 @@ function setMessageValidityClassList(isValid)
 }
 
 // 
-// Set failure icon when the message is sending.
+// Show failure to send message.
 // 
-function setFailureIcon()
+function showFailureMessage()
 {
-	// Remove the loading icon classes
-	loadingIconClasses.forEach(function (c) {
-		fontAwesomeIcon.classList.remove(c);
-	});
-
-	// Remove the success icon class
-	fontAwesomeIcon.classList.remove(successIconClass);
-
-	// Add the failure icon class
-	fontAwesomeIcon.classList.add(failureIconClass);
+	// Set diplay style so failure message shows
+	contactSuccessFeedback.style.display = "none";
+	contactFailureFeedback.style.display = "block";
+	contactEmptyFeedback.style.display = "none";
 }
 
 // 
-// Set loading icon when the message is sending.
+// Show message sent successfully message.
 // 
-function setLoadingIcon()
+function showSuccessMessage()
 {
-	// Indicate that sending of message is active
-	contactSendButton.classList.add(sendActiveClass);
-
-	// Add the loading icon classes
-	loadingIconClasses.forEach(function (c) {
-		fontAwesomeIcon.classList.add(c);
-	});
-
-	// Remove the success and failure icon classes
-	//fontAwesomeIcon.classList.add("fa-spinner", "fa-spin");
-	fontAwesomeIcon.classList.remove(successIconClass);
-	fontAwesomeIcon.classList.remove(failureIconClass);
-}
-
-// 
-// Set success icon when the message is sending.
-// 
-function setSuccessIcon()
-{
-	// Remove the loading icon classes
-	loadingIconClasses.forEach(function (c) {
-		fontAwesomeIcon.classList.remove(c);
-	});
-
-	// Add the success icon class
-	fontAwesomeIcon.classList.add(successIconClass);
-
-	// Remove the failure icon class
-	fontAwesomeIcon.classList.remove(failureIconClass);
+	// Set diplay style so success message shows
+	contactSuccessFeedback.style.display = "block";
+	contactFailureFeedback.style.display = "none";
+	contactEmptyFeedback.style.display = "none";
 }
 
